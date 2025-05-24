@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preetha Kumar - Portfolio</title>
+  <link rel="icon" type="image/jpg" href="./imegs/p.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Portfolio of Preetha Kumar - A passionate developer from Palghar, India.">
+  <meta name="keywords" content="Preetha Kumar, portfolio, developer, web development, engineering student">
+  <meta name="author" content="Preetha Kumar">
+  <meta property="og:title" content="Preetha Kumar - Portfolio">
+  <meta property="og:description" content="Explore my journey, projects, goals, and contact details.">
+  <meta property="og:image" content="URL_TO_YOUR_IMAGE">
+  <meta property="og:url" content="URL_OF_YOUR_SITE">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
+    class="fixed bottom-5 right-5 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-400 transition duration-300 z-50">
+    ↑
+  </button>
+
+  <header class="bg-blue-600 text-white py-10 text-center">
+    <h1 class="text-4xl font-bold">Welcome to My Portfolio</h1>
+    <p class="mt-2 text-xl">Hello, I'm <strong>Preetha Kumar</strong>. Here's my journey, achievements, and aspirations!</p>
+  </header>
+
+  <nav class="bg-blue-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0 text-xl font-semibold">Preetha Kumar</div>
+        <div class="block lg:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex space-x-10 text-xl" id="nav-links">
+          <a href="#welcome" class="hover:text-blue-300">Welcome</a>
+          <a href="#about" class="hover:text-blue-300">About Me</a>
+          <a href="#achievements" class="hover:text-blue-300">Achievements</a>
+          <a href="#goals" class="hover:text-blue-300">Future Goals</a>
+          <a href="#personal" class="hover:text-blue-300">Personal Side</a>
+          <a href="#video" class="hover:text-blue-300">My Video</a>
+          <a href="#contact" class="hover:text-blue-300">Contact</a>
+          <a href="#shop" class="hover:text-blue-300">Shop</a>
+        </div>
+      </div>
+    </div>
+    <div class="hidden lg:hidden px-4 pb-4 space-y-2" id="mobile-menu">
+      <a href="#welcome" class="block hover:text-blue-300">Welcome</a>
+      <a href="#about" class="block hover:text-blue-300">About Me</a>
+      <a href="#achievements" class="block hover:text-blue-300">Achievements</a>
+      <a href="#goals" class="block hover:text-blue-300">Future Goals</a>
+      <a href="#personal" class="block hover:text-blue-300">Personal Side</a>
+      <a href="#video" class="block hover:text-blue-300">My Video</a>
+      <a href="#contact" class="block hover:text-blue-300">Contact</a>
+      <a href="#shop" class="block hover:text-blue-300">Shop</a>
+      <a href="#Testimonials" class="block hover:text-blue-300">Testimonials</a>
+    </div>
+  </nav>
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <div class="container mx-auto p-10">
+    <section id="welcome" class="section py-12 bg-blue-50 rounded-lg mb-10 shadow-lg text-center">
+      <h2 class="text-3xl font-semibold">Welcome</h2>
+      <img src="my photo.jpg" width="200" height="200" alt="My Photo" class="rounded-full mx-auto mt-6">
+    </section>
+
+    <!-- Daily Logs Section -->
+<section id="daily-logs" class="section py-12 bg-white rounded-lg mb-10 shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-6">Daily Learning Logs</h2>
+  <div class="space-y-4 text-lg max-w-3xl mx-auto">
+    <a href=" https://123preetha.github.io/portfolio1/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 1</h3>
+      <p>Introduction to HTML and basic structure of a web page. Learned tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, and how to add headings and paragraphs.</p>
+    </a>
+    <a href="https://123preetha.github.io/portfolio3/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 2</h3>
+      <p>Explored CSS for styling. Understood inline, internal, and external CSS. Practiced applying styles, using classes, and selectors.</p>
+    </a>
+    <a href="https://123preetha.github.io/portfolio5/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 3</h3>
+      <p>Dived into Flexbox and layout principles. Created responsive layouts using <code>display: flex</code> and various alignment properties.</p>
+    </a>
+    <a href="https://123preetha.github.io/portfilio6/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 4</h3>
+      <p>Introduced to JavaScript basics: variables, functions, and DOM manipulation. Made buttons interactive.</p>
+    </a>
+    <a href="https://123preetha.github.io/portfolio7/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 5</h3>
+      <p>Learned how to fetch data using JavaScript. Implemented JSON file reading and displayed achievements dynamically on the webpage.</p>
+    </a>
+    <a href="https://123preetha.github.io/portfolio7/" target="_blank" class="block p-4 bg-gray-100 rounded shadow hover:bg-blue-50 hover:shadow-md transition duration-300">
+      <h3 class="text-xl font-bold text-blue-600">Day 6</h3>
+      <p>Learned To add filters in Shopping Website.Updated the Payment Methods.</p>
+    </a>
+  </div>
+</section>
+</div>
+
+   <!-- Video Section -->
+  <section id="intro-video" class="py-12 bg-white rounded-lg mb-10 shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-6">Video</h2>
+  <div class="flex justify-center">
+    <video width="1000" height="400" controls class="rounded-lg shadow-lg">
+      <source src="intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+    
+<!-- Video Section -->
+<section id="video" class="py-12 bg-white rounded-lg mb-10 shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-6">My YouTube Video</h2>
+  <div class="flex justify-center">
+    <iframe width="800" height="450" 
+            src="https://www.youtube.com/embed/W_MfNQ9cv9M" 
+            title="Preetha's Portfolio Video" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            class="rounded-lg shadow-lg">
+    </iframe>
+  </div>
+</section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section py-12 bg-white rounded-lg mb-10 shadow-lg">
+      <h2 class="text-3xl font-semibold text-center mb-4">About Me</h2>
+      <ul class="space-y-4 text-lg mx-auto max-w-lg text-center">
+        <li><strong>Name:</strong> Preetha Kumar</li>
+        <li><strong>Location:</strong> Palghar, India</li>
+        <li><strong>Education:</strong> Computer Engineering, St. John College of Engineering and Management</li>
+        </ul>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="section py-12 bg-white rounded-lg mb-10 shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-4">Skills</h2>
+  <div id="skills-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
+    <p class="col-span-full text-gray-500">Loading skills...</p>
+  </div>
+</section>
+
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section py-12 bg-gray-50 rounded-lg mb-10 shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-6">Achievements</h2>
+  <div id="achievement-list" class="space-y-4 text-lg text-center max-w-2xl mx-auto">
+  </div>
+</section>
+
+
+    <!-- Future Goals Section -->
+    <section id="goals" class="section py-12 bg-white rounded-lg mb-10 shadow-lg">
+      <h2 class="text-3xl font-semibold text-center mb-4">Future Goals</h2>
+      <p class="text-lg text-center max-w-xl mx-auto">My goal is to become a skilled web developer and build user-friendly, impactful websites for a global audience.</p>
+    </section>
+
+    <!-- Personal Side Section -->
+    <section id="personal" class="section py-12 bg-blue-50 rounded-lg mb-10 shadow-lg">
+      <h2 class="text-3xl font-semibold text-center mb-4">Personal Side</h2>
+      <div class="max-w-xl mx-auto text-lg text-center space-y-4">
+        <p><strong>Hobbies:</strong> Reading, Painting, Storytelling, and capturing moments through different mediums.</p>
+        <p><strong>Role Models:</strong> Steve Jobs (for inspiration), MS Dhoni (for calm and a sharp mind).</p>
+        <p><strong>Favorite Websites/Startups:</strong> GitHub (open collaboration), Notion (productivity), Zerodha (Indian fintech innovation), CODDY (to practice coding).</p>
+      </div>
+    </section>
+    <!--Testimonials -->
+    <section id="Testimonials" class="py-12 bg-white rounded-lg mb-10 shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-6">Testimonials</h2>
+  <div class="carousel w-full">
+    <div class="carousel-item w-full">
+      <div class="card w-full bg-base-100 shadow-xl">
+        <div class="card-body">
+          <p class="text-lg">"Preetha's work is exceptional!"</p>
+          <footer class="text-sm text-right">- Client A</footer>
+        </div>
+      </div>
+    </div>
+    <!-- Add more carousel items as needed -->
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+<section id="contact" class="section py-12 bg-gray-50 rounded-lg shadow-lg">
+  <h2 class="text-3xl font-semibold text-center mb-6">Contact Me</h2>
+
+  <!-- Info Text -->
+  <div class="text-center text-lg mb-10">
+    <p>Feel free to reach out to me:</p>
+  </div>
+
+  <!-- Responsive Contact Icons -->
+  <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 justify-items-center items-center mb-12">
+    <!-- Email -->
+    <li>
+      <a href="mailto:preethakumar2005@gmail.com" class="text-blue-600 flex flex-col items-center">
+        <i class="fa-solid fa-square-envelope fa-3x" style="color: #ec0909;"></i>
+        <span class="mt-2">Email</span>
+      </a>
+    </li>
+
+    <!-- Phone -->
+    <li>
+      <a href="tel:+918888888888" class="text-blue-600 flex flex-col items-center">
+        <i class="fa-sharp fa-solid fa-phone-volume fa-3x" style="color: #1f2123;"></i>
+        <span class="mt-2">Phone</span>
+      </a>
+    </li>
+
+    <!-- WhatsApp -->
+    <li>
+      <a href="https://wa.me/918888888888" target="_blank" rel="noopener noreferrer" class="text-blue-600 flex flex-col items-center">
+        <i class="fa-brands fa-whatsapp fa-3x" style="color: #16e339;"></i>
+        <span class="mt-2">WhatsApp</span>
+      </a>
+    </li>
+
+    <!-- GitHub -->
+    <li>
+      <a href="https://github.com/preetha-kumar" target="_blank" rel="noopener noreferrer" class="text-blue-600 flex flex-col items-center">
+        <i class="fa-brands fa-github fa-3x" style="color: #22252a;"></i>
+        <span class="mt-2">GitHub</span>
+      </a>
+    </li>
+
+    <!-- LinkedIn -->
+    <li>
+      <a href="https://www.linkedin.com/in/preetha-kumar" target="_blank" rel="noopener noreferrer" class="text-blue-600 flex flex-col items-center">
+        <i class="fa-brands fa-linkedin fa-3x"></i>
+        <span class="mt-2">LinkedIn</span>
+      </a>
+    </li>
+
+    <!-- Instagram -->
+    <li>
+      <a href="https://www.instagram.com/janhavi__gawad" target="_blank" rel="noopener noreferrer" class="text-blue-600 flex flex-col items-center">
+        <i class="fa-brands fa-instagram fa-3x" style="color: #e1306c;"></i>
+        <span class="mt-2">Instagram</span>
+      </a>
+    </li>
+
+    <!-- Location -->
+    <li>
+      <a href="https://www.google.com/maps/place/Palghar,+Maharashtra" target="_blank" rel="noopener noreferrer" class="text-blue-600 flex flex-col items-center">
+        <i class="fa-solid fa-location-pin fa-3x" style="color: #f39c12;"></i>
+        <span class="mt-2">Location</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Contact Form -->
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-left font-medium text-gray-700">Name</label>
+        <input type="text" id="name" name="name" required
+               class="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-left font-medium text-gray-700">Email</label>
+        <input type="email" id="email" name="email" required
+               class="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="message" class="block text-left font-medium text-gray-700">Message</label>
+        <textarea id="message" name="message" rows="4" required
+                  class="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit"
+                class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="shop" class="py-12 px-6 bg-gray-100 dark:bg-gray-800 text-center">
+        <h2 class="text-3xl font-bold mb-4">🛍️ My Shop</h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-6 max-w-xl mx-auto">
+          Explore online Book store featuring Different and Interesting Books. Built with TailwindCSS and JavaScript, it's a sleek and responsive shopping experience!
+        </p>
+        <a href="shop.html" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+          Visit Preetha Stores
+        </a>
+    </section>
+
+
+
+  <!-- Footer -->
+  <footer class="py-6 bg-blue-600 text-white text-center">
+    <p>&copy; 2025 Preetha Kumar | All Rights Reserved</p>
+  </footer>
+<script>
+  fetch('achievement.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      const container = document.getElementById('achievement-list');
+      data.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "p-4 bg-white rounded shadow hover:shadow-lg transition duration-300";
+        card.innerHTML = `<h3 class="text-xl font-semibold">${item.title}</h3>
+                          <p>${item.description}</p>`;
+        container.appendChild(card);
+      });
+    })
+    .catch(error => {
+      document.getElementById('achievement-list').innerText = 'Failed to load achievements.';
+      console.error("Error fetching achievements:", error);
+    });
+</script>
+<script>
+  fetch('skills.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch skills");
+      }
+      return response.json();
+    })
+    .then(data => {
+      const skillsContainer = document.getElementById('skills-list');
+      skillsContainer.innerHTML = ''; // Clear loading message
+      data.forEach(skill => {
+        const card = document.createElement('div');
+        card.className = "p-4 bg-gray-100 rounded shadow hover:shadow-md transition duration-300";
+        card.innerHTML = `<h3 class="text-xl font-semibold">${skill.name}</h3>
+                          <p class="text-sm text-gray-600">${skill.level}</p>`;
+        skillsContainer.appendChild(card);
+      });
+    })
+    .catch(error => {
+      document.getElementById('skills-list').innerText = 'Failed to load skills.';
+      console.error("Error fetching skills:", error);
+    });
+</script>
+<div id="cookie-consent" class="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4 text-center">
+  <p>We use cookies to improve your experience. <a href="/privacy-policy" class="underline">Learn more</a></p>
+  <button id="accept-cookies" class="btn btn-primary mt-2">Accept</button>
+</div>
+
+<script>
+  document.getElementById('accept-cookies').addEventListener('click', () => {
+    document.getElementById('cookie-consent').style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
+
+  if (localStorage.getItem('cookiesAccepted')) {
+    document.getElementById('cookie-consent').style.display = 'none';
+  }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'YOUR_TRACKING_ID');
+</script>
+<script>
+  fetch('skills.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch skills");
+      }
+      return response.json();
+    })
+    .then(data => {
+      const skillsContainer = document.getElementById('skills-list');
+      skillsContainer.innerHTML = ''; // Clear loading message
+      data.forEach(skill => {
+        const skillCard = document.createElement('div');
+        skillCard.className = "p-4 bg-gray-100 rounded shadow hover:shadow-md transition duration-300";
+        skillCard.innerHTML = `<h3 class="text-xl font-semibold text-blue-600">${skill.name}</h3>
+                               <p class="text-gray-700">${skill.description}</p>`;
+        skillsContainer.appendChild(skillCard);
+      });
+    })
+    .catch(error => {
+      const skillsContainer = document.getElementById('skills-list');
+      skillsContainer.innerHTML = '<p class="col-span-full text-red-500">Failed to load skills.</p>';
+      console.error("Error fetching skills:", error);
+    });
+</script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "HTML",
+    "description": "Strong foundation in semantic HTML5 and accessibility practices."
+  },
+  {
+    "name": "CSS",
+    "description": "Experienced with Flexbox, Grid, and responsive design using Tailwind CSS."
+  },
+  {
+    "name": "JavaScript",
+    "description": "Proficient in ES6+, DOM manipulation, and basic API interaction."
+  }
+  
+
+]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 text-gray-800 p-6">
+
+  <div class="max-w-xl mx-auto bg-white p-6 rounded shadow-md">
+    <h1 class="text-2xl font-bold text-green-600 mb-4">✅ Order Placed Successfully!</h1>
+    <div id="order-details" class="space-y-4 text-gray-700">
+      <!-- JavaScript will insert order summary here -->
+    </div>
+    <a href="index.html" class="mt-6 inline-block text-blue-600 hover:underline">← Back to Shop</a>
+  </div>
+
+  <script>
+    const order = JSON.parse(localStorage.getItem("order"));
+    const orderDetails = document.getElementById("order-details");
+
+    if (order) {
+      const itemsList = order.cart.map(item => {
+        const itemTotal = item.price * item.quantity;
+        return `<li>${item.name} × ${item.quantity} = ₹${itemTotal}</li>`;
+      }).join("");
+
+      orderDetails.innerHTML = `
+        <p><strong>Delivery Address:</strong><br>${order.address}</p>
+        <p><strong>Email Address:</strong> ${order.email}</p>
+        <p><strong>Phone Number:</strong> ${order.mobile}</p>
+        <p><strong>Delivery Option:</strong> ${order.deliveryOption}</p>
+        <p><strong>Payment Method:</strong> ${order.paymentMethod}</p>
+        <p><strong>Order Total:</strong> ₹${order.total}</p>
+        <div>
+          <strong>Items Ordered:</strong>
+          <ul class="list-disc ml-6 mt-1">${itemsList}</ul>
+        </div>
+      `;
+
+      localStorage.removeItem("order"); // Clean up after display
+    } else {
+      orderDetails.innerHTML = "<p>No order information found. Please go back and place your order.</p>";
+    }
+  </script>
+
+</body>
+</html>
+

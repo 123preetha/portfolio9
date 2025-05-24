@@ -1,0 +1,141 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Header */
+  .hero {
+    background: linear-gradient(135deg, #0026ff 0%, #0026ff 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: white;
+    border: 1px solid #ffddb3;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 12px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #ff6200;
+    font-weight: 600;
+  }
+  
+  .navbar a:hover {
+    color: #ff6200;
+  }
+  
+  /* Section */
+  .section {
+    background: hsl(0, 0%, 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  }
+  
+  .section h2 {
+    color: #ff6200;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  /* Media */
+  .media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .profile-photo {
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    .rotated {
+  transform: rotate(45deg);
+}
+
+    box-shadow: 0 0 12px rgba(255, 122, 0, 0.4);
+  }
+  
+  .intro-video {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255, 122, 0, 0.4);
+  }
+  
+  ul {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: #0000ff;
+    color: white;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    color: #fff4e6;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .media {
+      flex-direction: column;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .profile-photo,
+    .intro-video {
+      width: 100%;
+      max-width: 100%;
+    }
+  }

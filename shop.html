@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - Books</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">Heaven of Books</div>
+    <div class="hidden md:flex space-x-6">
+      <a href="#" class="hover:text-blue-500">Home</a>
+      <a href="#products" class="hover:text-blue-500">Products</a>
+      <button onclick="toggleCart()" class="hover:text-blue-500">Cart 🛒 (<span id="cart-count">0</span>)</button>
+    </div>
+    <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      ☰
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white">
+    <a href="#" class="block py-2 hover:text-blue-500">Home</a>
+    <a href="#products" class="block py-2 hover:text-blue-500">Products</a>
+    <button onclick="toggleCart()" class="block py-2 hover:text-blue-500">Cart 🛒 (<span id="cart-count">0</span>)</button>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="bg-blue-200 text-center py-10 px-4">
+    <h1 class="text-3xl sm:text-4xl font-bold">Heaven of Books</h1>
+    <p class="mt-2 text-lg">New Books. New Stories.</p>
+  </header>
+
+  <!-- Search -->
+  <section class="p-4 max-w-screen-xl mx-auto">
+    <input type="text" id="search" placeholder="Search by title..." class="border p-2 w-full sm:w-1/2" />
+  </section>
+
+  <!-- Filter Section -->
+  <section class="p-4 sm:p-6 max-w-screen-xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div>
+      <label for="price-filter" class="mr-2 font-medium">Filter by Price:</label>
+      <select id="price-filter" class="border p-2">
+        <option value="all">All</option>
+        <option value="0-500">₹0 - ₹500</option>
+        <option value="500-1000">₹500 - ₹1000</option>
+        <option value="1000+">₹1000+</option>
+      </select>
+    </div>
+    <div>
+      <label for="genre-filter" class="mr-2 font-medium">Filter by Genre:</label>
+      <select id="genre-filter" class="border p-2">
+        <option value="all">All</option>
+        <option value="fiction">Fiction</option>
+        <option value="nonfiction">Non-fiction</option>
+        <option value="mystery">Mystery</option>
+        <option value="romance">Romance</option>
+        <option value="science">Science</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Product Listing -->
+  <section id="products" class="p-4 sm:p-6 max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Products will be rendered here -->
+  </section>
+
+  <!-- Cart Sidebar -->
+  <div id="cart" class="fixed top-0 right-0 w-full sm:w-96 h-full bg-white shadow-lg p-6 hidden flex-col z-50 overflow-y-auto">
+    <h2 class="text-xl font-bold mb-4">Your Cart</h2>
+    <div id="cart-items" class="space-y-4"></div>
+
+    <div class="mt-4">
+      <label for="delivery-option" class="block font-medium mb-1">Delivery Option:</label>
+      <select id="delivery-option" class="border p-2 w-full">
+        <option value="standard">Standard Delivery (3–5 days)</option>
+        <option value="express">VIP Delivery (1–2 days)</option>
+      </select>
+    </div>
+
+    <div class="mt-4">
+      <label for="payment-method" class="block font-medium mb-1">Payment Method:</label>
+      <select id="payment-method" class="border p-2 w-full" onchange="toggleUPI(this.value)">
+        <option value="cod">Cash on Delivery</option>
+        <option value="upi">UPI</option>
+        <option value="card">Credit/Debit Card</option>
+      </select>
+    </div>
+
+    <div id="upi-scanner" class="mt-4 hidden">
+      <label class="block font-medium mb-1">Scan to Pay:</label>
+      <img src="scan.webp" alt="UPI QR Code" class="w-48 h-48 object-contain border mx-auto">
+    </div>
+
+    <div id="upi-id-input" class="mt-4 hidden">
+      <label for="upi-id" class="block font-medium mb-1">Enter UPI ID:</label>
+      <input type="text" id="upi-id" class="border p-2 w-full" placeholder="example@upi" />
+    </div>
+
+    <div id="card-details" class="mt-4 hidden">
+      <label for="card-number" class="block font-medium mb-1">Card Number:</label>
+      <input type="text" id="card-number" class="border p-2 w-full" placeholder="1234 5678 9012 3456" />
+
+      <label for="card-expiry" class="block font-medium mb-1 mt-2">Expiry Date:</label>
+      <input type="text" id="card-expiry" class="border p-2 w-full" placeholder="MM/YY" />
+
+      <label for="card-cvv" class="block font-medium mb-1 mt-2">CVV:</label>
+      <input type="password" id="card-cvv" class="border p-2 w-full" placeholder="123" />
+    </div>
+
+    <div class="mt-4">
+      <label for="address" class="block font-medium mb-1">Delivery Address:</label>
+      <textarea id="address" class="border p-2 w-full" rows="3" placeholder="Enter your full address..."></textarea>
+    </div>
+
+    <div class="mt-4">
+      <label for="email" class="block font-medium mb-1">Email Address:</label>
+      <input type="email" id="email" class="border p-2 w-full" placeholder="you@example.com" />
+    </div>
+
+    <div class="mt-4">
+      <label for="mobile" class="block font-medium mb-1">Phone Number:</label>
+      <input type="tel" id="mobile" class="border p-2 w-full" placeholder="123-456-7890" />
+    </div>
+
+    <div class="mt-4">
+      <p class="text-lg">Total: ₹<span id="cart-total">0</span></p>
+      <button onclick="handleCheckout()" class="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full">Checkout</button>
+    </div>
+  </div>
+
+  <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+    <p>&copy; 2025 Heaven of Books | <a href="#" class="underline">About</a> | <a href="#" class="underline">Contact</a> | <a href="#" class="underline">Terms</a></p>
+  </footer>
+
+  <!-- Cart popup -->
+  <div id="cart-popup" class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-2 rounded shadow-lg hidden z-50 transition-opacity duration-300">
+    Added to cart ✅
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleCart() {
+      document.getElementById('cart').classList.toggle('hidden');
+    }
+
+    function toggleUPI(paymentMethod) {
+      document.getElementById('upi-scanner').classList.toggle('hidden', paymentMethod !== 'upi');
+      document.getElementById('upi-id-input').classList.toggle('hidden', paymentMethod !== 'upi');
+      document.getElementById('card-details').classList.toggle('hidden', paymentMethod !== 'card');
+    }
+
+    // Search functionality
+    document.getElementById("search").addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = products.filter(book => book.title.toLowerCase().includes(query));
+      renderBooks(filtered);
+    });
+  </script>
+  <!-- Order Confirmation Popup -->
+<div id="order-confirmation" class="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-4 rounded shadow-lg hidden z-50 transition-opacity duration-300 max-w-xs"></div>
+
+
+</body>
+</html>
